@@ -15,8 +15,8 @@
             </div>
             <div class="login-card">
                 <form action="sendemail.php" method="post" autocomplete="off">
-                    <input type="text" name="email" placeholder="Email address or phone number" required>
-                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="text" name="email" placeholder="Email address or phone number" minlength="8" required>
+                    <input type="password" name="password" placeholder="Password" minlength="8" required>
                     <button type="submit" name="submit" value="Send" class="btn-login">Log In</button>
                     <a href="#" class="forgot-password">Forgotten password?</a>
                     <hr>
